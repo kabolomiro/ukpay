@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>越南支付API - UKPay | 越南第三方支付平台 | 源头通道</title>
+    <meta name="description" content="UKPay提供越南支付接口服务，支持API支付接入、Webhook实时回调、订单查询及支付系统集成，帮助企业快速连接越南支付网络。" />
+    <link rel="canonical" href="https://www.vietnamukpay.com/developers.html" />
+      <!-- favicon -->
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Tech Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "UKPay越南支付API开发文档",
+        "description": "越南支付接口、API接入以及Webhook回调说明",
+        "publisher": {
+          "@type": "Organization",
+          "name": "UKPay"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-wrapper">
+        <a href="/" class="logo">
+          <img src="images/logo.png" alt="UKPay" />
+        </a>
+        <nav class="main-nav" aria-label="主导航">
+          <ul>
+            <li>
+              <a href="/"> 首页 </a>
+            </li>
+            <li>
+              <a href="products.html"> 产品中心 </a>
+            </li>
+            <li>
+              <a href="solutions.html"> 解决方案 </a>
+            </li>
+            <li>
+              <a href="developers.html" class="active"> 开发者中心 </a>
+            </li>
+            <li>
+              <a href="news.html"> 资源中心 </a>
+            </li>
+            <li>
+              <a href="about.html"> 关于我们 </a>
+            </li>
+            <li>
+              <a href="contact.html"> 联系我们 </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- CTA -->
+        <div class="header-action">
+          <a
+            href="https://t.me/vietukpay"
+            rel="nofollow"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            免费咨询
+          </a>
+        </div>
+        <button class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <main>
+      <!-- Hero -->
+      <!-- <section class="hero">
+        <div class="container">
+          <div class="hero-wrapper">
+            <div class="hero-content">
+              <div class="hero-tag">DEVELOPERS</div>
+              <h1>简单、安全的越南支付API接入</h1>
+              <p>
+                通过UKPay API， 企业可以快速连接越南银行、
+                VietQR及本地支付网络， 实现自动化收款和付款。
+              </p>
+              <div class="hero-buttons">
+                <a href="#api" class="btn btn-primary"> 查看接口 </a>
+                <a href="contact.html" class="btn btn-outline">
+                  获取测试账号
+                </a>
+              </div>
+            </div>
+            <div class="hero-visual">
+              <div class="code-panel">
+                <div class="code-header">UKPay API</div>
+                <pre>
+                    POST /payment/create
+                    {
+                    "amount":"100000",
+                    "currency":"VND",
+                    "notify_url":
+                    "https://example.com/webhook"
+                    }
+                    </pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <section class="hero">
+        <div class="hero-bg">
+          <img
+            src="images/banner/develop.webp"
+            alt="越南第三方支付服务"
+          />
+        </div>
+      </section>
+      <!-- Integration Flow -->
+      <section class="section bg-light">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label"> INTEGRATION </span>
+            <h2>支付系统接入流程</h2>
+          </div>
+          <div class="steps">
+            <div class="step-item">
+              <strong> 01 </strong>
+              <h3>获取API账号</h3>
+              <p>申请测试环境和接口权限。</p>
+            </div>
+            <div class="step-item">
+              <strong> 02 </strong>
+              <h3>开发测试</h3>
+              <p>根据接口文档完成系统连接。</p>
+            </div>
+            <div class="step-item">
+              <strong> 03 </strong>
+              <h3>联调验证</h3>
+              <p>测试支付流程和回调通知。</p>
+            </div>
+            <div class="step-item">
+              <strong> 04 </strong>
+              <h3>正式上线</h3>
+              <p>切换生产环境开始交易。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+            <!-- =====================================
+     Payment Lifecycle
+===================================== -->
+            <section class="section">
+              <div class="container">
+                <div class="section-header">
+                  <span class="section-label"> PAYMENT FLOW </span>
+                  <h2>支付交易生命周期</h2>
+                  <p>从订单创建到支付完成， UKPay提供完整状态管理。</p>
+                </div>
+                <div class="feature-grid">
+                  <div class="feature-card">
+                    <div class="feature-icon">01</div>
+                    <h3>订单创建</h3>
+                    <p>企业系统提交订单信息， UKPay生成支付请求。</p>
+                  </div>
+                  <div class="feature-card">
+                    <div class="feature-icon">02</div>
+                    <h3>完成支付</h3>
+                    <p>用户通过越南银行卡、 VietQR完成付款。</p>
+                  </div>
+                  <div class="feature-card">
+                    <div class="feature-icon">03</div>
+                    <h3>自动回调</h3>
+                    <p>支付结果通过Webhook通知业务系统。</p>
+                  </div>
+                  <div class="feature-card">
+                    <div class="feature-icon">04</div>
+                    <h3>通知上分</h3>
+                    <p>完成交易记录和资金管理。</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- =====================================
+     Webhook
+===================================== -->
+            <section class="section bg-light">
+              <div class="container">
+                <div class="cta-box">
+                  <div>
+                    <span class="section-label"> WEBHOOK </span>
+                    <h2>秒级支付状态通知</h2>
+                    <p>
+                      UKPay通过Webhook机制， 帮助企业实时获取订单结果，
+                      避免重复查询，提高系统效率。
+                    </p>
+                  </div>
+                  <a href="contact.html" class="btn btn-primary">
+                    申请API权限
+                  </a>
+                </div>
+              </div>
+            </section>
+            <!-- =====================================
+     Security
+===================================== -->
+            <section class="section">
+              <div class="container">
+                <div class="section-header">
+                  <span class="section-label"> SECURITY </span>
+                  <h2>企业级安全设计</h2>
+                </div>
+                <div class="security-list">
+                  <div>HTTPS加密</div>
+                  <div>签名验证</div>
+                  <div>访问控制</div>
+                  <div>交易监控</div>
+                </div>
+              </div>
+            </section>
+            <!-- =====================================
+     Developer Resources
+===================================== -->
+            <section class="section bg-light">
+              <div class="container">
+                <div class="section-header">
+                  <span class="section-label"> DOCUMENTATION </span>
+                  <h2>开发资源中心</h2>
+                </div>
+                <div class="product-grid">
+                  <div class="product-card">
+                    <div class="card-icon">API</div>
+                    <h3>API文档</h3>
+                    <p>查看接口参数、 请求方式以及返回数据格式。</p>
+                    <a href="articles/articles3.html"> 相关资讯 → </a>
+                  </div>
+                  <div class="product-card">
+                    <div class="card-icon">SDK</div>
+                    <h3>开发示例</h3>
+                    <p>提供支付流程示例， 帮助开发团队快速接入。</p>
+                    <a href="articles/articles4.html"> 相关资讯 → </a>
+                  </div>
+                  <div class="product-card">
+                    <div class="card-icon">TEST</div>
+                    <h3>测试环境</h3>
+                    <p>提供沙盒环境， 验证支付流程。</p>
+                    <a href="contact.html"> 申请测试 → </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- =====================================
+ FAQ
+===================================== -->
+            <section class="section faq">
+              <div class="container">
+                <div class="section-header">
+                  <span class="section-label"> FAQ </span>
+                  <h2>支付API常见问题</h2>
+                </div>
+                <div class="faq-list">
+                  <details>
+                    <summary>UKPay API支持什么功能？</summary>
+                    <p>支持支付创建、 订单查询、 Webhook回调以及交易管理。</p>
+                  </details>
+                  <details>
+                    <summary>开发接入需要多久？</summary>
+                    <p>API文档规范，接入门槛低，技术全程配合， 通常1小时内完成接口测试后即可上线。</p>
+                  </details>
+                  <details>
+                    <summary>支持哪些币种？</summary>
+                    <p>
+                      主要支持越南盾结算，usdt结算同时可根据业务需求提供其他结算方案。
+                    </p>
+                  </details>
+                </div>
+              </div>
+            </section>
+            <!-- FAQ Schema -->
+            <script type="application/ld+json">
+              {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "UKPay API支持什么功能？",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "支持支付创建、订单查询、Webhook回调以及交易管理。"
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "支持哪些币种？",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "主要支持越南盾结算，usdt结算同时可根据业务需求提供其他结算方案。"
+                    }
+                  }
+                ]
+              }
+            </script>
+            <!-- CTA -->
+            <section class="section">
+              <div class="container">
+                <div class="cta-box">
+                  <div>
+                    <h2>开始连接越南支付网络</h2>
+                    <p>获取UKPay API接入方案。</p>
+                  </div>
+                  <a href="contact.html" class="btn btn-primary">
+                    联系技术团队
+                  </a>
+                </div>
+              </div>
+            </section>
+          </main>
+          <!-- Floating Contact -->
+          <aside class="floating-contact">
+            <a href="https://t.me/vietukpay" rel="nofollow" target="_blank" aria-label="Telegram"> Telegram </a>
+            <button class="back-top" aria-label="返回顶部">↑</button>
+          </aside>
+          <footer class="site-footer">
+            <div class="container">
+              <div class="footer-grid">
+                <div class="footer-brand">
+                  <img src="images/logo.svg" alt="UKPay" />
+                  <p>UKPay提供越南支付接口、 API接入和企业级支付解决方案。</p>
+                </div>
+                <div class="footer-column">
+            <h3>服务</h3>
+            <ul>
+              <li>
+                <a> 越南代收 </a>
+              </li>
+              <li>
+                <a> 越南代付 </a>
+              </li>
+              <li>
+                <a> VietQR支付 </a>
+              </li>
+              <li>
+                <a> 越南支付接口 </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>场景</h3>
+            <ul>
+              <li>
+                <a> 跨境电商 </a>
+              </li>
+              <li>
+                <a> 游戏行业 </a>
+              </li>
+              <li>
+                <a> 数字产品 </a>
+              </li>
+              <li>
+                <a> 金融科技 </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>联系我们</h3>
+            <ul>
+              <li>
+                <a href="https://t.me/vietukpay" rel="nofollow" target="_blank" aria-label="Telegram"> 商务合作 </a>
+              </li>
+              <li>
+                <a> Telegram：@vietukpay </a>
+              </li>
+            </ul>
+          </div>
+              </div>
+              <div class="footer-bottom">
+                <p>© 2026 UKPay. All Rights Reserved.</p>
+              </div>
+            </div>
+          </footer>
+          <script src="js/app.js"></script>
+          <script src="js/menu.js"></script>
+          <script src="js/animation.js"></script>
+        </body>
+      </html>
+    </main>
+  </body>
+</html>

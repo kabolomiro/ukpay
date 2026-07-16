@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <!-- ===========================================
+         UKPay Official Website
+         Version : 1.0
+         Author  : UKPay
+         =========================================== -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+      UKPay | 越南第三方支付平台 | 源头通道 | 代收代付服务
+    </title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="UKPay 专注越南第三方支付服务，提供越南源头代收代付通道，支持越南银行卡收款、VietQR 聚合支付、越南本地支付接口、USDT 结算等一站式支付解决方案，秒级回调、高成功率，支持高并发、高交易量业务场景，具备良好的扩展能力。"
+    />
+    <meta name="author" content="UKPay" />
+    <meta
+      name="robots"
+      content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+    />
+    <meta name="application-name" content="UKPay" />
+    <meta name="apple-mobile-web-app-title" content="UKPay" />
+    <meta name="theme-color" content="#165DFF" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="canonical" href="https://www.vietnamukpay.com/" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="UKPay" />
+    <meta property="og:title" content="UKPay｜专业越南第三方支付服务商" />
+    <meta
+      property="og:description"
+      content="覆盖越南主流银行、VietQR 与电子钱包，提供越南代收代付、支付接口、支付网关及跨境支付解决方案。"
+    />
+    <meta property="og:url" content="https://www.vietnamukpay.com/" />
+    <meta
+      property="og:image"
+      content="https://www.vietnamukpay.com/images/og-cover.png"
+    />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="UKPay｜专业越南第三方支付服务商" />
+    <meta
+      name="twitter:description"
+      content="越南支付通道｜越南代收代付｜VietQR 聚合支付"
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.vietnamukpay.com/images/og-cover.png"
+    />
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.ico" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "UKPay",
+        "url": "https://www.vietnamukpay.com",
+        "logo": "https://www.vietnamukpay.com/images/logo.svg",
+        "description": "专业越南第三方支付服务商",
+        "sameAs": []
+      }
+    </script>
+    <!-- Website Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "UKPay",
+        "url": "https://www.vietnamukpay.com",
+        "inLanguage": "zh-CN"
+      }
+    </script>
+  </head>
+  <body>
+    <!-- =====================================
+                 Header Start
+    ====================================== -->
+    <header class="site-header">
+      <div class="container">
+        <div class="header-wrapper">
+          <!-- Logo -->
+          <a href="/" class="logo" aria-label="UKPay">
+            <img src="images/logo.png" alt="UKPay" />
+          </a>
+          <!-- Navigation -->
+          <nav class="main-nav" aria-label="主导航">
+            <ul>
+              <li>
+                <a href="/" class="active"> 首页 </a>
+              </li>
+              <li>
+                <a href="products.html"> 产品中心 </a>
+              </li>
+              <li>
+                <a href="solutions.html"> 解决方案 </a>
+              </li>
+              <li>
+                <a href="developers.html"> 开发者中心 </a>
+              </li>
+              <li>
+                <a href="news.html"> 资源中心 </a>
+              </li>
+              <li>
+                <a href="about.html"> 关于我们 </a>
+              </li>
+              <li>
+                <a href="contact.html"> 联系我们 </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- CTA -->
+          <div class="header-action">
+            <a
+              href="https://t.me/vietukpay"
+              rel="nofollow"
+              target="_blank"
+              class="btn btn-primary"
+            >
+              免费咨询
+            </a>
+          </div>
+          <!-- Mobile -->
+          <button class="menu-toggle" aria-label="打开菜单">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- =====================================
+                 Header End
+    ====================================== -->
+    <main>
+      <!-- =====================================
+                     Hero
+        ====================================== -->
+      <section class="hero">
+        <div class="hero-bg">
+          <img
+            src="images/banner/index.webp"
+            alt="越南第三方支付服务"
+          />
+        </div>
+      </section>
+      <!-- =====================================
+            Payment Scenario
+        ====================================== -->
+      <section class="payment-scene section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label">PAYMENT SCENARIOS</span>
+            <h2>覆盖越南主流支付场景</h2>
+            <p>
+              为跨境电商、电子游戏、数字产品、跨境收款等行业提供稳定的本地支付能力。
+            </p>
+          </div>
+          <div class="scene-grid">
+            <article class="scene-card">
+              <div class="scene-image">
+                <img
+                  src="images/home/scene-ecommerce.webp"
+                  alt="越南电商支付"
+                  loading="lazy"
+                />
+              </div>
+              <div class="scene-content">
+                <h3>电商收款</h3>
+                <p>
+                  支持
+                  VietQR、银行卡、本地电子钱包等支付方式，帮助海外商家快速完成越南市场收款。
+                </p>
+              </div>
+            </article>
+            <article class="scene-card">
+              <div class="scene-image">
+                <img
+                  src="images/home/scene-game.webp"
+                  alt="越南游戏支付"
+                  loading="lazy"
+                />
+              </div>
+              <div class="scene-content">
+                <h3>游戏充值</h3>
+                <p>
+                  支持游戏充值、虚拟商品支付、秒级回调，支付成功率行业领先。
+                </p>
+              </div>
+            </article>
+            <article class="scene-card">
+              <div class="scene-image">
+                <img
+                  src="images/home/scene-api.webp"
+                  alt="跨境收款"
+                  loading="lazy"
+                />
+              </div>
+              <div class="scene-content">
+                <h3>跨境收款</h3>
+                <p>支持欧洲、中国内地支付宝、微信跨境收款。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- =====================================
+             Brand Value Section
+        ====================================== -->
+      <section class="brand-value section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label"> BRAND VALUE </span>
+            <h2>专注越南支付生态，为企业提供稳定可靠的支付服务</h2>
+            <p>
+              UKPay
+              深入连接越南本地银行、电子钱包及支付网络，帮助全球企业更加快速、安全地进入越南市场。
+            </p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-icon">01</div>
+              <h3>原生支付通道</h3>
+              <ul>
+                <li>✅ 源头卡商，费率低、响应快</li>
+                <li>✅ 支持全银行扫码收款与转账</li>
+                <li>✅ Viet QR接入，支付体验好</li>
+              </ul>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">02</div>
+              <h3>极速收款付款</h3>
+              <ul>
+                <li>✅ 自研监控程序，稳定不掉单</li>
+                <li>✅ 灵活通道切换，确保成功率</li>
+                <li>✅ 批量自动代付，极速出款</li>
+              </ul>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">03</div>
+              <h3>快速技术接入</h3>
+              <ul>
+                <li>✅ API接口简单，接入门槛低</li>
+                <li>✅ 技术客服全程跟踪测试</li>
+                <li>✅ 大额商户可协商第三方担保</li>
+              </ul>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">04</div>
+              <h3>灵活资金结算</h3>
+              <ul>
+                <li>✅ 支持代收代付一体</li>
+                <li>✅ 支持余额回 U</li>
+                <li>✅ 支持部分地区跨境收款</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- =====================================
+             Payment Coverage Section
+        ====================================== -->
+      <section class="coverage section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label"> PAYMENT COVERAGE </span>
+            <h2>覆盖越南主流支付方式</h2>
+            <p>集成越南本地银行、二维码支付及电子钱包生态。</p>
+          </div>
+          <div class="coverage-grid">
+            <div class="coverage-item">
+              <strong> 银行网络 </strong>
+              <span> 覆盖75 + 越南主流商业银行 </span>
+              <img src="images/fuwu2.webp" alt="银行网络" loading="lazy">
+            </div>
+            <div class="coverage-item">
+              <strong> VietQR </strong>
+              <span> 一码聚合收款 </span>
+              <img src="images/fuwu1.webp" alt="银行网络" loading="lazy">
+            </div>
+            <div class="coverage-item">
+              <strong> 钱包支付 </strong>
+              <span> 本地电子钱包生态 </span>
+              <img src="images/fuwu3.webp" alt="银行网络" loading="lazy">
+            </div>
+            <div class="coverage-item">
+              <strong> 跨境支付 </strong>
+              <span> 全球企业接入 </span>
+              <img src="images/fuwu4.webp" alt="银行网络" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- =====================================
+             Payment Network Section
+        ====================================== -->
+      <section class="payment-network-section section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label"> PAYMENT NETWORK </span>
+            <h2>构建连接越南本地支付生态的基础设施</h2>
+            <p>
+              UKPay 通过统一支付接口， 连接银行、二维码、钱包及企业系统，
+              帮助全球企业快速完成越南市场支付布局。
+            </p>
+          </div>
+          <div class="network-flow">
+            <div class="flow-item">
+              <h3>消费用户</h3>
+              <p>使用越南本地支付方式完成付款。</p>
+            </div>
+            <div class="flow-line"></div>
+
+            <div class="flow-item">
+              <h3>VietQR</h3>
+              <p>二维码支付系统，生成收银台。</p>
+            </div>
+            <div class="flow-line"></div>
+            <div class="flow-item">
+              <h3>UKPay</h3>
+              <p>处理支付请求、风控及订单管理。</p>
+            </div>
+            <div class="flow-line"></div>
+            <div class="flow-item">
+              <h3>商户系统</h3>
+              <p>API 接入， 自动完成交易通知。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- =====================================
+            Product Showcase
+        ====================================== -->
+      <section class="product-showcase section">
+        <div class="container">
+          <div class="showcase-row">
+            <div class="showcase-image">
+              <img
+                src="images/dashboard1.webp"
+                alt="UKPay Dashboard"
+                loading="lazy"
+              />
+            </div>
+            <div class="showcase-content">
+              <span class="section-label"> PRODUCT </span>
+              <h2>企业级支付平台</h2>
+              <p>
+                一个后台即可管理支付订单、 收款数据、 API、商户管理。
+              </p>
+              <ul class="feature-list">
+                <li>✓ 多支付渠道统一管理</li>
+                <li>✓ 实时订单监控</li>
+                <li>✓ API 快速接入</li>
+                <li>✓ 秒级支付回调</li>
+                <li>✓ 数据统计分析</li>
+              </ul>
+              <a href="products.html" class="btn btn-primary"> 查看产品 </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- =====================================
+             Product Matrix Section
+        ====================================== -->
+      <section class="products-preview section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label"> PRODUCTS </span>
+            <h2>完整的越南支付产品体系</h2>
+            <p>从收款、付款到支付接口， 为企业提供完整支付解决方案。</p>
+          </div>
+          <div class="product-grid">
+            <article class="product-card">
+              <div class="card-icon">收</div>
+              <h3>越南代收通道</h3>
+              <p>支持银行卡、 VietQR、 本地支付方式收款。</p>
+              <a href="articles/articles7.html"> 查看详情 → </a>
+            </article>
+            <article class="product-card">
+              <div class="card-icon">付</div>
+              <h3>越南代付服务</h3>
+              <p>支持批量付款、 自动处理、 快速到账。</p>
+              <a href="articles/articles2.html"> 查看详情 → </a>
+            </article>
+            <article class="product-card">
+              <div class="card-icon">API</div>
+              <h3>支付接口</h3>
+              <p>提供标准 API， 支持订单查询、 自动回调。</p>
+              <a href="articles/articles3.html"> 查看详情 → </a>
+            </article>
+            <article class="product-card">
+              <div class="card-icon">QR</div>
+              <h3>VietQR 聚合支付</h3>
+              <p>一码连接越南多种支付场景。</p>
+              <a href="articles/articles14.html"> 查看详情 → </a>
+            </article>
+            <article class="product-card">
+              <div class="card-icon">GW</div>
+              <h3>支付网关</h3>
+              <p>提供稳定支付路由和交易管理能力。</p>
+              <a href="articles/articles4.html"> 查看详情 → </a>
+            </article>
+            <article class="product-card">
+              <div class="card-icon">USDT</div>
+              <h3>灵活结算</h3>
+              <p>支持 VND、 USDT 等多种结算方式。</p>
+              <a href="articles/articles5.html"> 查看详情 → </a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- =====================================
+             Technology Section
+        ====================================== -->
+      <section class="technology section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label"> TECHNOLOGY </span>
+            <h2>面向企业级应用的支付技术能力</h2>
+            <p>稳定接口、实时通知、 自动化管理， 帮助企业构建可靠支付系统。</p>
+          </div>
+          <div class="technology-grid">
+            <div class="technology-item">
+              <h3>API 接口</h3>
+              <p>标准化接口设计， 快速完成系统对接。</p>
+            </div>
+            <div class="technology-item">
+              <h3>双模式收银台</h3>
+              <p>支持UKPay官方收银台及自建收银台</p>
+            </div>
+            <div class="technology-item">
+              <h3>自动查单</h3>
+              <p>机器人自主查询订单状态查询和补单处理。</p>
+            </div>
+            <div class="technology-item">
+              <h3>风控监控</h3>
+              <p>实时监测交易状态， 提升系统稳定性。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- =====================================
+            Partner Banks
+        ====================================== -->
+      <section class="bank-wall section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label"> PARTNERS </span>
+            <h2>合作银行</h2>
+          </div>
+          <div class="bank-logo-grid">
+            <img src="images/banks/ACB.png" alt="ACB" />
+            <img src="images/banks/Agribank.png" alt="Agribank" />
+            <img src="images/banks/BIDV.png" alt="BIDV" />
+            <img src="images/banks/HDBank.png" alt="HDBank" />
+            <img src="images/banks/MBBank.png" alt="MBBank" />
+            <img src="images/banks/Sacombank.png" alt="Sacombank" />
+            <img src="images/banks/SHB.png" alt="SHB" />
+            <img src="images/banks/Techcombank.png" alt="Techcombank" />
+            <img src="images/banks/VIB.png" alt="VIB" />
+            <img src="images/banks/Vietcombank.png" alt="Vietcombank" />
+            <img src="images/banks/VietinBank.png" alt="VietinBank" />
+            <img src="images/banks/VPBank.png" alt="VPBank" />
+          </div>
+        </div>
+      </section>
+      <!-- =====================================
+             Security Section
+        ====================================== -->
+      <section class="security section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label"> SECURITY </span>
+            <h2>安全稳定的支付基础设施</h2>
+          </div>
+          <div class="security-list">
+            <div>数据加密</div>
+            <div>API权限管理</div>
+            <div>IP安全控制</div>
+            <div>交易日志记录</div>
+          </div>
+        </div>
+      </section>
+      <!-- =====================================
+             Industry Solutions Section
+        ====================================== -->
+      <section class="solutions section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label"> SOLUTIONS </span>
+            <h2>面向不同行业的越南支付解决方案</h2>
+            <p>根据企业业务模式， 提供灵活、安全、高效的本地支付接入方案。</p>
+          </div>
+          <div class="solution-grid">
+            <article class="solution-card">
+              <h3>跨境电商</h3>
+              <p>
+                支持海外企业连接越南消费者， 提供本地银行卡、二维码及钱包收款。
+              </p>
+              <a href="articles/articles7.html"> 相关资讯 → </a>
+            </article>
+            <article class="solution-card">
+              <h3>游戏行业</h3>
+              <p>支持游戏充值、虚拟商品交易， 提供快速到账及稳定支付体验。</p>
+              <a href="articles/articles13.html"> 相关资讯 → </a>
+            </article>
+            <article class="solution-card">
+              <h3>数字产品</h3>
+              <p>满足数字内容、 软件服务及在线产品支付需求。</p>
+              <a href="articles/articles1.html"> 相关资讯 → </a>
+            </article>
+            <article class="solution-card">
+              <h3>跨境收款</h3>
+              <p>为跨境收款企业提供境外支付和结算能力。</p>
+              <a href="articles/articles10.html"> 相关资讯 → </a>
+            </article>
+            <article class="solution-card">
+              <h3>金融科技</h3>
+              <p>支持金融科技企业构建本地支付连接。</p>
+              <a href="articles/articles13.html"> 相关资讯 → </a>
+            </article>
+            <article class="solution-card">
+              <h3>平台型业务</h3>
+              <p>支持支付运营商接入，多商户、多场景支付管理。</p>
+              <a href="articles/articles6.html"> 相关资讯 → </a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- =====================================
+             How It Works Section
+        ====================================== -->
+      <section class="workflow section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label"> HOW IT WORKS </span>
+            <h2>从商务合作到正式上线的完整流程</h2>
+          </div>
+          <div class="steps">
+            <div class="step-item">
+              <strong> 01 </strong>
+              <h3>商务沟通</h3>
+              <p>了解业务需求和支付场景。</p>
+            </div>
+            <div class="step-item">
+              <strong> 02 </strong>
+              <h3>测试账号</h3>
+              <p>提供测试环境进行功能验证。</p>
+            </div>
+            <div class="step-item">
+              <strong> 03 </strong>
+              <h3>API 接入</h3>
+              <p>完成系统接口对接。</p>
+            </div>
+            <div class="step-item">
+              <strong> 04 </strong>
+              <h3>正式上线</h3>
+              <p>开启真实交易并持续技术支持。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- =====================================
+             Statistics Section
+        ====================================== -->
+      <section class="statistics section">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <strong> 95%+ </strong>
+              <span> 支付成功率 </span>
+            </div>
+            <div class="stat-item">
+              <strong> 秒级 </strong>
+              <span> 回调通知 </span>
+            </div>
+            <div class="stat-item">
+              <strong> 7×24 </strong>
+              <span> 技术支持 </span>
+            </div>
+            <div class="stat-item">
+              <strong> 多渠道 </strong>
+              <span> 越南支付覆盖 </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- =====================================
+             News Section
+        ====================================== -->
+      <section class="news-preview section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label"> INSIGHTS </span>
+            <h2>越南支付行业最新动态</h2>
+            <p>分享越南支付市场趋势、 本地支付生态变化以及企业接入经验。</p>
+          </div>
+          <div class="news-grid">
+            <article class="news-card">
+              <time datetime="2026-01-01"> 行业洞察 </time>
+              <h3>越南数字支付市场发展趋势分析</h3>
+              <p>了解越南本地支付、 QR 支付及跨境业务的发展机会。</p>
+              <a href="news.html"> 阅读更多 → </a>
+            </article>
+            <article class="news-card">
+              <time datetime="2026-01-01"> 支付知识 </time>
+              <h3>企业如何接入越南本地支付系统</h3>
+              <p>从 API 接入、 测试到上线的完整流程介绍。</p>
+              <a href="news.html"> 阅读更多 → </a>
+            </article>
+            <article class="news-card">
+              <time datetime="2026-01-01"> 技术文章 </time>
+              <h3>Webhook 在支付系统中的作用</h3>
+              <p>了解实时支付通知和订单状态同步机制。</p>
+              <a href="news.html"> 阅读更多 → </a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- =====================================
+             Knowledge Center Entry
+        ====================================== -->
+      <section class="knowledge-preview section">
+        <div class="container">
+          <div class="knowledge-box">
+            <div>
+              <span class="section-label"> KNOWLEDGE CENTER </span>
+              <h2>深入了解越南支付生态</h2>
+              <p>
+                UKPay 持续输出越南支付行业知识， 帮助企业理解本地银行、
+                VietQR、支付接口及跨境收款模式。
+              </p>
+            </div>
+            <a href="news.html" class="btn btn-primary">
+              查看知识中心
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- =====================================
+             FAQ Section
+        ====================================== -->
+      <section class="faq section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-label"> FAQ </span>
+            <h2>常见问题</h2>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>UKPay 提供哪些越南支付服务？</summary>
+              <p>
+                UKPay 提供越南代收、 越南代付、 VietQR 聚合支付、 支付接口、
+                支付网关以及跨境收款解决方案。
+              </p>
+            </details>
+            <details>
+              <summary>是否支持 API 接入？</summary>
+              <p>支持标准 API、 Webhook 回调、 订单查询及自动通知功能。</p>
+            </details>
+            <details>
+              <summary>是否支持 VND 和 USDT 结算？</summary>
+              <p>UKPay 支持根据业务需求选择不同结算方式。</p>
+            </details>
+            <details>
+              <summary>如何开始合作？</summary>
+              <p>
+                联系商务团队后， 我们会提供测试账号、 技术文档以及接入支持。
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+      <!-- FAQ Schema -->
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "UKPay 提供哪些越南支付服务？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "UKPay提供越南代收、越南代付、VietQR聚合支付、支付接口及跨境收款解决方案。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "是否支持API接入？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "支持API、Webhook回调、订单查询以及自动通知功能。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "是否支持VND和USDT结算？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "UKPay支持企业根据业务需求选择结算方式。"
+              }
+            }
+          ]
+        }
+      </script>
+      <!-- =====================================
+             CTA Section
+        ====================================== -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-box">
+            <div class="cta-content">
+              <span class="section-label"> GET STARTED </span>
+              <h2>开启越南支付市场布局</h2>
+              <p>
+                联系 UKPay 团队， 获取越南支付通道、 API 接入方案以及业务咨询。
+              </p>
+            </div>
+            <div class="cta-actions">
+              <a href="contact.html" class="btn btn-primary"> 联系商务 </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- =====================================
+                 Footer
+    ====================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="footer-logo">
+              <img src="images/logo.svg" alt="UKPay" />
+            </a>
+            <p>
+              UKPay
+              是专业越南第三方支付服务商，提供越南支付通道、代收代付、VietQR扫码支付、支付接口及跨境支付解决方案。
+            </p>
+          </div>
+          <div class="footer-column">
+            <h3>服务</h3>
+            <ul>
+              <li>
+                <a> 越南代收 </a>
+              </li>
+              <li>
+                <a> 越南代付 </a>
+              </li>
+              <li>
+                <a> VietQR支付 </a>
+              </li>
+              <li>
+                <a> 越南支付接口 </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>场景</h3>
+            <ul>
+              <li>
+                <a> 跨境电商 </a>
+              </li>
+              <li>
+                <a> 游戏行业 </a>
+              </li>
+              <li>
+                <a> 数字产品 </a>
+              </li>
+              <li>
+                <a> 金融科技 </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>联系我们</h3>
+            <ul>
+              <li>
+                <a href="https://t.me/vietukpay" rel="nofollow" target="_blank" aria-label="Telegram"> 商务合作 </a>
+              </li>
+              <li>
+                <a> Telegram：@vietukpay </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>© 2026 UKPay. All Rights Reserved.</div>
+          <div>
+            <a href="legal/privacy.html"> 隐私政策 </a>
+            <a href="legal/terms.html"> 服务条款 </a>
+            <a href="sitemap.xml"> 网站地图 </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- =====================================
+          Floating Customer Service
+    ====================================== -->
+    <aside class="floating-contact">
+      <a href="https://t.me/vietukpay" rel="nofollow" target="_blank" aria-label="Telegram"> Telegram </a>
+      <button class="back-top" aria-label="返回顶部">↑</button>
+    </aside>
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/animation.js"></script>
+  </body>
+</html>
