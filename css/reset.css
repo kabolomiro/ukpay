@@ -1,0 +1,170 @@
+/* ==========================================
+   UKPay Website
+   Reset CSS
+   Version: 1.0
+   ========================================== */
+/* 
+   Box sizing
+   全局统一盒模型
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/*
+   HTML 基础设置
+*/
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+}
+/*
+   Body 基础
+*/
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+/*
+   标题、段落
+   清除默认 margin
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+/*
+   列表
+*/
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/*
+   链接
+*/
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/*
+   图片、SVG
+*/
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+   图片默认防止空白
+*/
+img {
+    border: 0;
+}
+/*
+   Button
+*/
+button,
+input,
+textarea,
+select {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+}
+/*
+   Button 清除浏览器默认
+*/
+button {
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+/*
+   表单元素
+*/
+input,
+textarea {
+    outline: none;
+}
+/*
+   表格
+*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*
+   HTML5 元素兼容
+*/
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main,
+figure,
+figcaption {
+    display: block;
+}
+/*
+   引用
+*/
+blockquote,
+q {
+    quotes: none;
+}
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: "";
+}
+/*
+   防止 Safari 自动放大文字
+*/
+input,
+textarea,
+button {
+    -webkit-appearance: none;
+}
+/*
+   隐藏元素
+*/
+[hidden] {
+    display: none !important;
+}
+/*
+   无障碍辅助
+*/
+:focus-visible {
+    outline: 2px solid #165DFF;
+    outline-offset: 3px;
+}
+/*
+   禁止用户选择
+   用于装饰元素
+*/
+.no-select {
+    user-select: none;
+}
+/*
+   清除浮动备用
+*/
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}

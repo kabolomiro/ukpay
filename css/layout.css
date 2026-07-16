@@ -1,0 +1,411 @@
+/* ==========================================
+   UKPay Website
+   Layout System
+   Version: 1.0
+   ========================================== */
+/*
+==============================================
+    Header Layout
+==============================================
+*/
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:
+        var(--z-header);
+}
+.header-wrapper {
+    height:
+        80px;
+    display:
+        flex;
+    align-items:
+        center;
+    justify-content:
+        space-between;
+}
+.logo {
+    display:
+        flex;
+    align-items:
+        center;
+    flex-shrink:
+        0;
+}
+.logo img {
+    width:
+        130px;
+    height:
+        auto;
+}
+.main-nav {
+    flex:
+        1;
+    display:
+        flex;
+    justify-content:
+        center;
+}
+.main-nav ul {
+    display:
+        flex;
+    align-items:
+        center;
+    gap:
+        36px;
+}
+.main-nav li {
+    position:
+        relative;
+}
+.header-action {
+    display:
+        flex;
+    align-items:
+        center;
+}
+
+/*
+==============================================
+    Hero Visual Network
+==============================================
+*/
+.hero-visual {
+    display:
+        flex;
+    justify-content:
+        center;
+    align-items:
+        center;
+}
+.payment-network {
+    position:
+        relative;
+    width:
+        600px;
+    height:
+        600px;
+}
+.network-center {
+    position:
+        absolute;
+    top:
+        50%;
+    left:
+        50%;
+    transform:
+        translate(
+            -50%,
+            -50%
+        );
+}
+.network-node {
+    position:
+        absolute;
+    display:
+        flex;
+    flex-direction:
+        column;
+    align-items:
+        center;
+}
+.bank-node {
+    top:
+        80px;
+    left:
+        60px;
+}
+.qr-node {
+    top:
+        80px;
+    right:
+        60px;
+}
+.wallet-node {
+    bottom:
+        80px;
+    left:
+        60px;
+}
+.merchant-node {
+    bottom:
+        80px;
+    right:
+        60px;
+}
+.network-lines {
+    position:
+        absolute;
+    inset:
+        0;
+}
+/*
+==============================================
+    Grid System
+==============================================
+*/
+.feature-grid {
+    display:
+        grid;
+    grid-template-columns:
+        repeat(
+            4,
+            1fr
+        );
+    gap:
+        24px;
+}
+.coverage-grid {
+    display:
+        grid;
+    grid-template-columns:
+        repeat(
+            4,
+            1fr
+        );
+    gap:
+        24px;
+}
+.product-grid {
+    display:
+        grid;
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+    gap:
+        30px;
+}
+.technology-grid {
+    display:
+        grid;
+    grid-template-columns:
+        repeat(
+            4,
+            1fr
+        );
+    gap:
+        24px;
+}
+.solution-grid {
+    display:
+        grid;
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+    gap:
+        30px;
+}
+.story-grid {
+    display:
+        grid;
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+    gap:
+        30px;
+}
+/*
+==============================================
+    Payment Flow Layout
+==============================================
+*/
+.network-flow {
+    display:
+        flex;
+    align-items:
+        center;
+    justify-content:
+        center;
+    gap:
+        20px;
+}
+.flow-item {
+    position: relative;
+    padding: 30px;
+    border-radius: 24px;
+
+    /* 渐变背景 */
+    background: linear-gradient(
+        135deg,
+        #95a7fa,
+        #8af7c9
+    );
+
+    color: white;
+
+    /* 立体阴影 */
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255,255,255,0.3);
+
+    overflow: hidden;
+
+    transition: all 0.35s ease;
+    }
+    /* 鼠标悬浮立体效果 */
+    .flow-item:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 30px 60px rgba(0,0,0,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.4);
+    }
+
+
+    /* 增加顶部光泽 */
+    .flow-item::before {
+    content: "";
+    position: absolute;
+
+    top: -50%;
+    left: -50%;
+
+    width: 200%;
+    height: 200%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.25),
+        transparent
+    );
+
+    transform: rotate(25deg);
+
+    pointer-events: none;
+    }
+.flow-line {
+    width:
+        60px;
+    height:
+        2px;
+}
+/*
+==============================================
+    Workflow Steps
+==============================================
+*/
+.steps {
+    display:
+        grid;
+    grid-template-columns:
+        repeat(
+            4,
+            1fr
+        );
+    gap:
+        30px;
+}
+.step-item {
+    text-align:
+        center;
+}
+/*
+==============================================
+    Statistics
+==============================================
+*/
+.stats-grid {
+    display:
+        grid;
+    grid-template-columns:
+        repeat(
+            4,
+            1fr
+        );
+    gap:
+        20px;
+}
+/*
+==============================================
+    News
+==============================================
+*/
+.news-grid {
+    display:
+        grid;
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+    gap:
+        30px;
+}
+/*
+==============================================
+    CTA
+==============================================
+*/
+.cta-box {
+    display:
+        flex;
+    align-items:
+        center;
+    justify-content:
+        space-between;
+    gap:
+        40px;
+}
+.cta-actions {
+    display:
+        flex;
+    gap:
+        20px;
+}
+/*
+==============================================
+    Footer
+==============================================
+*/
+.footer-grid {
+    display:
+        grid;
+    grid-template-columns:
+        2fr
+        repeat(
+            3,
+            1fr
+        );
+    gap:
+        40px;
+}
+.footer-bottom {
+    margin-top:
+        60px;
+    padding-top:
+        30px;
+    display:
+        flex;
+    justify-content:
+        space-between;
+}
+/*
+==============================================
+    Floating Contact
+==============================================
+*/
+.floating-contact {
+    position:
+        fixed;
+    right:
+        24px;
+    bottom:
+        120px;
+    z-index:
+        var(--z-floating);
+    display:
+        flex;
+    flex-direction:
+        column;
+    gap:
+        12px;
+}

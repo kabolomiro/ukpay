@@ -1,0 +1,1376 @@
+/* ==========================================
+   UKPay Website
+   Components Style
+   Version: 1.0
+   ========================================== */
+/*
+==============================================
+    Header
+==============================================
+*/
+.site-header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.6);
+}
+.main-nav a {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-medium);
+  color: var(--color-text);
+  transition: var(--transition-fast);
+}
+.main-nav a:hover,
+.main-nav .active {
+  color: var(--color-primary);
+}
+/*
+==============================================
+    Buttons
+==============================================
+*/
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 28px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-semibold);
+  transition: var(--transition-normal);
+  cursor: pointer;
+}
+.btn-primary {
+  color: var(--color-white);
+  background: var(--gradient-primary);
+  box-shadow: var(--shadow-sm);
+}
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.btn-outline {
+  border: 1px solid var(--color-border);
+  color: var(--color-title);
+  background: transparent;
+}
+.btn-outline:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+/*
+==============================================
+    Hero
+==============================================
+*/
+.hero-tag {
+  display: inline-flex;
+  padding: 8px 18px;
+  margin-bottom: 24px;
+  border-radius: var(--radius-full);
+  color: var(--color-primary);
+  background: rgba(22, 93, 255, 0.08);
+  font-weight: var(--font-semibold);
+}
+.hero-content p {
+  margin-top: 24px;
+  max-width: 580px;
+  font-size: var(--font-size-lg);
+}
+/*
+==============================================
+    Payment Network
+==============================================
+*/
+.network-center {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow-lg);
+}
+.network-logo {
+  font-size: 36px;
+  font-weight: var(--font-bold);
+}
+.network-node {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--color-white);
+  box-shadow: var(--shadow-md);
+  justify-content: center;
+}
+.node-icon {
+  font-size: 20px;
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+}
+.network-node p {
+  font-size: 14px;
+  margin-top: 8px;
+}
+/*
+==============================================
+    Feature Cards
+==============================================
+*/
+.feature-card {
+  position: relative;
+  padding: 30px;
+  border-radius: 24px;
+
+  /* 渐变背景 */
+  background: linear-gradient(135deg, #46eefa, #4ab49473);
+
+  color: rgb(50, 43, 66);
+
+  /* 立体阴影 */
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+
+  overflow: hidden;
+
+  transition: all 0.35s ease;
+}
+
+/* 鼠标悬浮立体效果 */
+.feature-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* 增加顶部光泽 */
+.feature-card::before {
+  content: "";
+  position: absolute;
+
+  top: -50%;
+  left: -50%;
+
+  width: 200%;
+  height: 200%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+
+  transform: rotate(25deg);
+
+  pointer-events: none;
+}
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  color: var(--color-primary);
+  background: rgba(7, 6, 6, 0.08);
+  margin-bottom: 20px;
+}
+/*
+==============================================
+    Coverage
+==============================================
+*/
+.coverage-item {
+  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #90cafa, #f0e8ee);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  transition: 0.3s;
+}
+.coverage-item img {
+  filter: drop-shadow(0 15px 15px rgba(168, 151, 151, 0.25));
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.coverage-item:hover img {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.coverage-item strong {
+  display: block;
+  font-size: 24px;
+  color: var(--color-title);
+}
+.coverage-item span {
+  display: block;
+  margin-top: 10px;
+}
+/*
+==============================================
+    Product Cards
+==============================================
+*/
+.product-card {
+  position: relative;
+  padding: 30px;
+  border-radius: 24px;
+
+  /* 渐变背景 */
+  background: linear-gradient(50deg, #59e6c2c4, #b265ff62);
+
+  color: white;
+
+  /* 立体阴影 */
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+
+  overflow: hidden;
+
+  transition: all 0.35s ease;
+}
+
+/* 鼠标悬浮立体效果 */
+.product-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* 增加顶部光泽 */
+.product-card::before {
+  content: "";
+  position: absolute;
+
+  top: -50%;
+  left: -50%;
+
+  width: 200%;
+  height: 200%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+
+  transform: rotate(25deg);
+
+  pointer-events: none;
+}
+.card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-primary);
+  color: white;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.product-card a {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+/*
+==============================================
+    Technology Cards
+==============================================
+*/
+.technology-item {
+  position: relative;
+  padding: 30px;
+  border-radius: 24px;
+
+  /* 渐变背景 */
+  background: linear-gradient(135deg, #abbaff, #877f8f);
+
+  color: white;
+
+  /* 立体阴影 */
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+
+  overflow: hidden;
+
+  transition: all 0.35s ease;
+}
+
+/* 鼠标悬浮立体效果 */
+.technology-item:hover {
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* 增加顶部光泽 */
+.technology-item::before {
+  content: "";
+  position: absolute;
+
+  top: -50%;
+  left: -50%;
+
+  width: 200%;
+  height: 200%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+
+  transform: rotate(25deg);
+
+  pointer-events: none;
+}
+.technology-item h3 {
+  margin-bottom: 16px;
+}
+/*
+==============================================
+    Security
+==============================================
+*/
+.security {
+  background: var(--color-bg);
+}
+.security-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.security-list div {
+  padding: 28px;
+  text-align: center;
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  font-weight: var(--font-semibold);
+  color: var(--color-title);
+  box-shadow: var(--shadow-sm);
+}
+/*
+==============================================
+    Industry Solutions
+==============================================
+*/
+.solution-card {
+  position: relative;
+  padding: 30px;
+  border-radius: 24px;
+
+  /* 渐变背景 */
+  background: linear-gradient(135deg, #dde0ec, #ba8be9);
+
+  color: rgb(94, 48, 48);
+
+  /* 立体阴影 */
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+
+  overflow: hidden;
+
+  transition: all 0.35s ease;
+}
+
+/* 鼠标悬浮立体效果 */
+.solution-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 30px 60px rgba(226, 220, 220, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* 增加顶部光泽 */
+.solution-card::before {
+  content: "";
+  position: absolute;
+
+  top: -50%;
+  left: -50%;
+
+  width: 200%;
+  height: 200%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+
+  transform: rotate(25deg);
+
+  pointer-events: none;
+}
+.solution-card h3 {
+  margin-bottom: 16px;
+}
+.solution-card a {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--color-primary);
+  font-weight: var(--font-semibold);
+}
+/*
+==============================================
+    Customer Stories
+==============================================
+*/
+/* .customer-stories {
+    background:
+        var(--color-bg);
+}
+.story-card {
+    padding:
+        36px;
+    background:
+        var(--color-white);
+    border-radius:
+        var(--radius-lg);
+    box-shadow:
+        var(--shadow-sm);
+}
+.story-card span {
+    display:
+        inline-flex;
+    padding:
+        6px 14px;
+    border-radius:
+        var(--radius-full);
+    font-size:
+        var(--font-size-sm);
+    color:
+        var(--color-primary);
+    background:
+        rgba(
+            22,
+            93,
+            255,
+            .08
+        );
+    margin-bottom:
+        20px;
+}
+.story-card h3 {
+    margin-bottom:
+        16px;
+} */
+/*
+==============================================
+    How It Works
+==============================================
+*/
+.workflow {
+  background: var(--color-white);
+}
+.step-item {
+  padding: 36px 24px;
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+}
+.step-item strong {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  font-size: 22px;
+}
+/*
+==============================================
+    Statistics
+==============================================
+*/
+.statistics {
+  background: var(--gradient-dark);
+}
+.stat-item {
+  text-align: center;
+  color: var(--color-white);
+}
+.stat-item strong {
+  display: block;
+  font-size: 42px;
+  font-weight: var(--font-bold);
+  color: var(--color-white);
+}
+.stat-item span {
+  display: block;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.75);
+}
+/*
+==============================================
+    News
+==============================================
+*/
+.news-card {
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+}
+.news-card time {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+}
+.news-card h3 {
+  margin-bottom: 16px;
+}
+/*
+==============================================
+    Knowledge Center
+==============================================
+*/
+.knowledge-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  border-radius: var(--radius-xl);
+  background: var(--gradient-primary);
+  color: var(--color-white);
+}
+.knowledge-box h2,
+.knowledge-box p {
+  color: var(--color-white);
+}
+/*
+==============================================
+    FAQ
+==============================================
+*/
+.faq {
+  background: var(--color-bg);
+}
+.faq-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.faq-list details {
+  padding: 24px;
+  margin-bottom: 16px;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+}
+.faq-list summary {
+  cursor: pointer;
+  font-weight: var(--font-semibold);
+  color: var(--color-title);
+}
+.faq-list p {
+  margin-top: 16px;
+}
+/*
+==============================================
+    CTA
+==============================================
+*/
+.cta-section {
+  padding: 80px 0;
+}
+.cta-box {
+  padding: 70px;
+  border-radius: var(--radius-xl);
+  background: var(--gradient-dark);
+  color: var(--color-white);
+}
+.cta-box h2,
+.cta-box p {
+  color: var(--color-white);
+}
+/*
+==============================================
+    Footer
+==============================================
+*/
+.site-footer {
+  padding-top: 80px;
+  padding-bottom: 30px;
+  background: #081120;
+  color: rgba(255, 255, 255, 0.7);
+}
+.footer-logo img {
+  width: 140px;
+}
+.footer-brand p {
+  margin-top: 20px;
+}
+.footer-column h3 {
+  color: var(--color-white);
+  margin-bottom: 20px;
+}
+.footer-column li {
+  margin-bottom: 12px;
+}
+.footer-column a:hover {
+  color: var(--color-white);
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+/*
+==============================================
+    Floating Customer Service
+==============================================
+*/
+.floating-contact a,
+.back-top {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-white);
+  color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+  font-size: 12px;
+}
+.floating-contact a:hover,
+.back-top:hover {
+  transform: translateY(-5px);
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+/* ===========================================================
+   HOME IMAGE MODULE
+===========================================================*/
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+}
+.hero-bg {
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+  height: auto;
+  inset: auto;
+}
+.hero-bg img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  filter: brightness(0.95);
+}
+.hero-wrapper {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 620px;
+  gap: 80px;
+  align-items: center;
+}
+.hero-content h1 {
+  color: #fff;
+  font-size: 58px;
+  line-height: 1.2;
+  margin-bottom: 28px;
+}
+.hero-content p {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 18px;
+  line-height: 1.9;
+}
+.hero-tag {
+  background: #165dff;
+  color: #fff;
+}
+.hero-image-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.25);
+}
+.hero-image-card img {
+  width: 100%;
+  display: block;
+}
+.hero-floating-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #fff;
+  padding: 18px 22px;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+.hero-floating-card img {
+  width: 42px;
+  height: 42px;
+}
+.card-bank {
+  top: 40px;
+  left: -35px;
+}
+.card-qr {
+  right: -25px;
+  top: 150px;
+}
+.card-wallet {
+  bottom: 50px;
+  left: -20px;
+}
+/* ===========================================================
+    图片模块
+===========================================================*/
+.payment-scene {
+  background: #f7f9fc;
+}
+.scene-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.scene-card {
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+  transition: 0.35s;
+}
+.scene-card:hover {
+  transform: translateY(-10px);
+}
+.scene-image {
+  height: 240px;
+  overflow: hidden;
+}
+.scene-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+.scene-card:hover img {
+  transform: scale(1.08);
+}
+.scene-content {
+  padding: 32px;
+}
+.scene-content h3 {
+  margin-bottom: 16px;
+}
+.scene-content p {
+  color: #666;
+  line-height: 1.8;
+}
+/* ===========================================================
+    产品展示
+===========================================================*/
+.product-showcase {
+  padding: 120px 0;
+}
+.showcase-row {
+  display: grid;
+  grid-template-columns: 580px 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.showcase-image {
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.08);
+}
+.showcase-image img {
+  width: 100%;
+  display: block;
+}
+.feature-list {
+  margin: 30px 0;
+  padding: 0;
+}
+.feature-list li {
+  list-style: none;
+  margin-bottom: 18px;
+  font-size: 17px;
+}
+/* ===========================================================
+    LOGO墙
+===========================================================*/
+.bank-wall {
+  background: #fff;
+}
+.bank-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-top: 70px;
+}
+.bank-logo-grid img {
+  height: 80px;
+  width: 100%;
+  object-fit: contain;
+  padding: 30px;
+  background: #fff;
+  border-radius: 18px;
+  border: 1px solid #eee;
+  transition: 0.35s;
+}
+.bank-logo-grid img:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+/* ===========================================================
+    客户案例
+===========================================================*/
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+.case-grid article {
+  background: #fff;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+  transition: 0.35s;
+}
+.case-grid article:hover {
+  transform: translateY(-10px);
+}
+.case-grid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+.case-grid h3 {
+  padding: 28px 28px 10px;
+}
+.case-grid p {
+  padding: 0 28px 30px;
+  color: #666;
+}
+
+/* =================================
+   Article Content
+================================= */
+.article-content img {
+  width: 100%;
+
+  border-radius: 16px;
+
+  margin: 30px 0;
+}
+
+.article-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 50px;
+  align-items: start;
+}
+
+/* 正文主体 */
+
+.article-content {
+  background: #ffffff;
+
+  padding: 45px 55px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+
+  line-height: 1.9;
+
+  color: #374151;
+
+  font-size: 16px;
+}
+
+/* 一级标题 */
+
+.article-content h2 {
+  margin-top: 45px;
+
+  margin-bottom: 20px;
+
+  font-size: 28px;
+
+  font-weight: 700;
+
+  color: #111827;
+
+  position: relative;
+
+  padding-left: 18px;
+}
+
+/* 标题左侧蓝线 */
+
+.article-content h2::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 8px;
+
+  width: 5px;
+
+  height: 28px;
+
+  background: #2563eb;
+
+  border-radius: 5px;
+}
+
+.article-content h3 {
+  font-size: 22px;
+
+  margin: 35px 0 15px;
+
+  color: #1f2937;
+}
+
+.article-content p {
+  margin-bottom: 22px;
+  text-indent: 2em;
+  color: #4b5563;
+}
+
+/* 加粗关键词 */
+
+.article-content strong {
+  color: #111827;
+
+  font-weight: 700;
+}
+
+/* 列表 */
+
+.article-content ul,
+.article-content ol {
+  margin: 25px 0;
+
+  padding-left: 30px;
+}
+
+.article-content li {
+  margin-bottom: 12px;
+}
+
+/* 引用 */
+
+.article-content blockquote {
+  margin: 30px 0;
+
+  padding: 20px 25px;
+
+  background: #f3f7ff;
+
+  border-left: 5px solid #2563eb;
+
+  border-radius: 8px;
+
+  color: #374151;
+}
+
+/* Article Header */
+
+.article-hero {
+  padding: 80px 0 60px;
+
+  background: linear-gradient(135deg, #f8fbff, #eef5ff);
+}
+
+.article-header {
+  max-width: 900px;
+}
+
+.article-tag {
+  display: inline-block;
+
+  padding: 6px 18px;
+
+  border-radius: 30px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 14px;
+
+  margin-bottom: 20px;
+}
+
+.article-header h1 {
+  font-size: 42px;
+
+  line-height: 1.3;
+
+  color: #111827;
+
+  margin-bottom: 25px;
+}
+
+.article-meta {
+  display: flex;
+
+  gap: 30px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+/* ==============================
+ Related Articles
+============================== */
+
+.article-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.article-card {
+  background: #fff;
+
+  padding: 30px;
+
+  border-radius: 16px;
+
+  border: 1px solid #e5e7eb;
+
+  transition: 0.3s;
+}
+
+.article-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.article-card h3 {
+  font-size: 20px;
+
+  line-height: 1.5;
+
+  margin-bottom: 15px;
+
+  color: #111827;
+}
+
+.article-card p {
+  color: #6b7280;
+
+  line-height: 1.7;
+
+  margin-bottom: 20px;
+}
+
+.article-card a {
+  color: #2563eb;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.article-card a:hover {
+  text-decoration: underline;
+}
+
+.article-sidebar {
+  position: sticky;
+
+  top: 100px;
+}
+
+.toc-box,
+.sidebar-box {
+  background: #fff;
+
+  padding: 25px;
+
+  border-radius: 16px;
+
+  margin-bottom: 25px;
+
+  border: 1px solid #e5e7eb;
+}
+
+.toc-box h3,
+.sidebar-box h3 {
+  font-size: 20px;
+
+  margin-bottom: 20px;
+}
+
+.toc-box ul {
+  list-style: none;
+
+  padding: 0;
+}
+
+.toc-box li {
+  margin-bottom: 15px;
+}
+
+.toc-box a {
+  color: #4b5563;
+
+  text-decoration: none;
+}
+
+.toc-box a:hover {
+  color: #2563eb;
+}
+/* ==============================
+ company about
+============================== */
+.company-intro {
+  padding: 90px 0;
+
+  background: #ffffff;
+}
+.company-intro-wrapper {
+  display: grid;
+
+  grid-template-columns: 1.5fr 1fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+.intro-left h1 {
+  font-size: 42px;
+
+  line-height: 1.3;
+
+  margin: 20px 0 35px;
+
+  color: #111827;
+
+  font-weight: 700;
+}
+
+.intro-left p {
+  font-size: 17px;
+  text-indent: 2em;
+  line-height: 2;
+  color: #4b5563;
+  margin-bottom: 22px;
+}
+.intro-right {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+.intro-card {
+  padding: 35px;
+
+  background: #fff;
+
+  border-radius: 18px;
+
+  border: 1px solid #e5e7eb;
+
+  text-align: center;
+
+  transition: 0.35s;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+.intro-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 45px rgba(37, 99, 235, 0.15);
+
+  border-color: #2563eb;
+}
+.intro-card .number {
+  font-size: 40px;
+
+  font-weight: 700;
+
+  color: #29caaf;
+
+  margin-bottom: 15px;
+}
+.intro-card span {
+  font-size: 15px;
+
+  color: #6b7280;
+}
+/* ==============================
+ contact introduce
+============================== */
+.contact-intro{
+
+padding:90px 0 40px;
+background:#fff;
+}
+.contact-wrapper{
+max-width:900px;
+margin:auto;
+text-indent: 2em;
+text-align:left;
+
+}
+.contact-wrapper h1{
+
+font-size:44px;
+
+line-height:1.3;
+
+margin:20px 0 30px;
+
+color:#111827;
+
+font-weight:700;
+
+}
+.contact-wrapper p{
+
+font-size:17px;
+
+line-height:2;
+
+color:#587091;
+
+margin-bottom:22px;
+
+}
+.telegram-contact{
+
+padding:40px 0 90px;
+
+}
+.telegram-card{
+
+max-width:700px;
+
+margin:auto;
+
+padding:60px;
+
+border-radius:24px;
+
+background:
+
+linear-gradient(
+55deg,
+#90b0f5,
+#aaa4aa
+);
+
+text-align:center;
+
+color:#fff;
+
+box-shadow:
+
+0 25px 60px rgba(37,99,235,.25);
+
+}
+.telegram-icon{
+
+width:180px;
+
+height:80px;
+
+border-radius:50%;
+
+background:#fff;
+
+color:#a6adbd;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-weight:700;
+
+font-size:22px;
+
+margin:auto;
+
+margin-bottom:30px;
+
+}
+.telegram-card h2{
+
+font-size:34px;
+
+margin-bottom:20px;
+
+}
+.telegram-card p{
+
+font-size:17px;
+
+line-height:1.9;
+
+opacity:.95;
+
+margin-bottom:35px;
+
+}
+.telegram-card .btn{
+
+background:#fff;
+
+color:#217381;
+
+font-weight:700;
+
+padding:16px 40px;
+
+border-radius:999px;
+
+transition:.3s;
+
+}
+.telegram-card .btn:hover{
+
+transform:translateY(-3px);
+
+}
