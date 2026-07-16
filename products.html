@@ -17,17 +17,25 @@
     <!-- Product Schema -->
     <script type="application/ld+json">
       {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "UKPay Vietnam Payment Solution",
-        "description": "越南支付通道、代收代付、VietQR收款及API支付接口服务",
-        "brand": {
-          "@type": "Brand",
-          "name": "UKPay"
+        "@context":"https://schema.org",
+        "@type":"Service",
+              "name":"越南第三方代收代付",
+              "serviceType":"代收代付服务",
+              "provider":{
+            "@type":"Organization",
+            "name":"UKPay",
+            "url":"https://www.vietnamukpay.com"
         },
-        "areaServed": "Vietnam"
+      
+        "description":"越南支付通道、代收代付、VietQR收款及API支付接口服务",
+      
+        "areaServed":{
+            "@type":"Country",
+            "name":"Vietnam"
+        }
+      
       }
-    </script>
+      </script>
   </head>
   <body>
     <header class="site-header">
